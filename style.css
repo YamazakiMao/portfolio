@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+/* リセットcss */
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    word-break: normal;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    font-family: noto-sans-cjk-jp,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+*,
+::before,
+::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+
+* {
+    padding: 0; 
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    background-color: #e4c9c0;
+}
+
+ul,li,dl,dd,dt,a {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* ヘッダー */
+
+#header h1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color:#fff;
+    text-align: center;
+    font-size: 5rem;
+    font-family: dunhill-script,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/*========= スクロールをすると下のエリアが上にかぶさるCSS ===============*/
+
+#header{
+    /*headerを全画面で見せる*/
+    width:100%;
+    height: 100vh;
+    position: relative;
+} 
+
+#header:before{
+    /*header の疑似要素に背景画像を指定*/
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height: 100vh;
+
+}
+
+/*下の被さるエリアの指定*/
+#container{
+    position: relative;
+    z-index:1;
+    /*以下はレイアウトのための記述*/
+    background:#fff;
+    padding:300px 0;
+    text-align: center;
+}
+
+.card {
+    background-color: #efe8d9;
+    border-radius: 20px;
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-bottom: 200px;
+}
+
+#container img {
+    width: 400px;
+    border-radius: 20px;
+}
+
+#container h2 {
+    color: #e4c9c0;
+    font-size: 2rem;
+    font-family: dunhill-script,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+#container p{
+    margin-top: 10px;
+    color: #a68b62;
+    font-family: a-otf-jun-pro,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.text-cover {
+    text-align: left;
+    padding: 5px 50px;
+}
+
+#container li {
+    margin: 0 auto;
+    color: #a68b62;
+    font-family: a-otf-jun-pro,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#container tr {
+    text-align: center ;
+}
+
+hr {
+    margin: 10px 0;
+    border-width: 1px 0 0 0; /* 線の太さを指定 */
+    border-style: solid; /* 線の種類を指定 */
+    border-color: #e4c9c0; /*線の色を指定 */
+}
+
+.card-text {
+    margin: 0 auto;
+	width: 400px;
+	overflow: hidden;
+	position: relative;	/* 相対位置指定 */
+}
+.card-text .caption {
+	font-size:  130%;
+	text-align: center;
+	padding-top:    90px;
+	color: #fff;
+}
+.card-text .mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;	/* 絶対位置指定 */
+	top: 0;
+	left:  0;
+	opacity:   0;	/* マスクを表示しない */
+	background-color:	#e4c9c0;	/* マスクは半透明 */
+	opacity: 0;
+    -webkit-transition:	all 0.2s ease;
+	transition:		all 0.2s ease;
+    border-radius: 20px;
+}
+.card-text:hover .mask {
+	opacity:  1;	/* マスクを表示する */
+    cursor: pointer;
+}
+
+
+/* 波を作る */
+.custom-shape-divider-bottom-1668149162 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1668149162 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1668149162 .shape-fill {
+    fill: #FFFFFF;
+}
