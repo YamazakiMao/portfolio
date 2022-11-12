@@ -78,7 +78,7 @@ ul,li,dl,dd,dt,a {
     z-index:1;
     /*以下はレイアウトのための記述*/
     background:#fff;
-    padding:300px 0;
+    padding:200px 0 50px 0;
     text-align: center;
 }
 
@@ -189,4 +189,29 @@ hr {
 
 .custom-shape-divider-bottom-1668149162 .shape-fill {
     fill: #FFFFFF;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+    .card {
+        background-color: #efe8d9;
+        border-radius: 20px;
+        width: 400px;
+        height: 600px;
+        margin: 0 auto;
+        padding: 20px 0;
+        margin-bottom: 200px;
+    }
+    
+    #container img {
+        width: 300px;
+        border-radius: 20px;
+    }
 }
